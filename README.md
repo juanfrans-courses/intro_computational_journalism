@@ -38,7 +38,6 @@ Course time will be full-day, Monday through Friday. Instruction time will be di
     * `if` statements and similar functions (`countif`, `sumif` and `sumifs`)
     * Retrieving specific values from tables (`index`, `match`, `vlookup`)
     * Merging tables with `index` + `match` or `vlookup`
-  * Creating a frequency distribution table and histograms
   * Pivot tables
   * Exporting data (`.csv` & `.txt`)
 * Extracting tables from *PDFs*

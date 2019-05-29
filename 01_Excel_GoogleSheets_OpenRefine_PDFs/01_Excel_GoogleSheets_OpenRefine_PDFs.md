@@ -71,10 +71,8 @@ Some of the basic summary calculations you can perform in Excel or Google Sheets
 
 These three formulas automatically ignore text in the range.
 
-Think of what other operations you can perform and explore other formulas.
-
 ### Exercise 3 - If statements
-* `if` statements perform simple logical tests and return a specific value for a `true` result and another for a `false` result.
+`if` statements perform simple logical tests and return a specific value for a `true` result and another for a `false` result:
 * The simplest syntax of this function is `=if(logical_test, [value_if_true], [value_if_false])`
 * You can also nest multiple `if` statements in one formula. This would take the following form: `=if(logical_test, if(logical_test, [value_if_true], [value_if_false]), [value_if_false])`
 * There are many more functions based on this simple logic, such as:
@@ -87,20 +85,35 @@ Think of what other operations you can perform and explore other formulas.
   * `~` is used when you actually have a `?` or a `*` that is not a wildcard (eg. `who~?*`)
 
 ### Exercise 4 - Looking up values
-* `index` and `match` functions let you lookup the location of a value or the value itself based on certain criteria.
+`index` and `match` functions let you lookup the location of a value or the value itself based on certain criteria:
 * The `index` function returns the value based on a table, row number, and row column:
   * It has the following syntax: `=index(array, row_num, [column_num])`
   * It can also take a series of tables: `=index((table1, table2, table3), row_num, [column_num], [area_num])`
   * And it can also return a whole row or column, just select the output cells and click `ctrl + shift + enter`
 * The `match` function returns the position of a value in a row, column or table:
   * It takes the following syntax: `=match(lookup_value, lookup_array, match_type)`
-  * `match_type` is either 0 (false) or 1 (true). 0 is a exact match, 1 is an approximation (eg. 575 will match to 500, after sorting A to Z, the largest value that's less than the lookup value)
-  * If `match_type` is 0 and the `lookup_value` is text, the lookup value can also include *wildcards*.
+  * `match_type` is either `True` or `False`. `False` requires an exact match, and `True` will use an approximation (eg. 575 will match to 500, after sorting A to Z, the largest value that's less than the lookup value)
+  * If `match_type` is `False` and the `lookup_value` is text, the lookup value can also include *wildcards*.
 * Finally, you can use the `index` and `match` functions together to get a specific value based on a condition:
   * Basic syntax: `{=index(array, match(lookup_value, lookup_column, FALSE), [column_num])`
   * And you can also use multiple criteria like this: `=index(array, match(1, (A1 = range1 * B1 = range2 * C1 = range3), 0))}` (use ctrl + shift + enter)
 * *Note that in Excel, as well as in Google Sheets, the first column is identified as column number 1. This is not the case in programming (Python and others), where the first column is identified as column number 0.*
 
-#### Exercise 5 - Joining tables
+### Exercise 5 - Joining tables
+There are a couple of ways of joining tables in Excel or Google Sheets, but the most common one is through the `vlookup` function, which allows you to lookup a value in a table and return a value on the same row but from a different column.
+* The basic syntax of this function is `=vlookup(value, table, col_index, [range_lookup])`
+* Just as in the `match` function the `range_lookup` can be `True` or `False`. `False` requires an exact match, whereas `True` will approximate.
+* In addition, wildcards can also be included in the `value` field when dealing with text.
+* To use the `vlookup` function to join two tables, you need to copy a modified version of the formula in every cell:
+  * That modified version, takes the following form: `=vlookup(value, $table, $col_index, [range_lookup])`.
+  * The `$` sign allows you to copy a formula without it changing the reference cells. Since all the values we are looking up will reference the same table and column, we must use the `$` sign to prevent these ranges from changing as we copy the formula.
 
-#### Exercise 6 - Pivot tables
+### Exercise 6 - Pivot tables
+Pivot tables are one of the most useful tools in Excel or Google Sheets. They allow you to aggregate data from a table in a variety of ways. In addition, creating them is extremely easy:
+* In Excel go to `Data/Summarize with Pivot Table`
+* And in Google Sheets do `Data/Pivot Table...`
+* This operation will lead you to a menu where you can choose the location of your pivot table. Because you will certainly experiment with different configurations of your table, and it will thus expand and contract, it is recommended to create them in their own separate sheet.
+* In the new sheet you will see a menu that allows you to drag and drop the different columns in your table into the different components of the pivot table: filters, rows, columns, and values.
+* And the values themselves can be aggregated with different operations: sum, count, maximum, minimum, average, standard deviation, etc.
+* Finally, once you have the pivot table that reflects your analysis, you can copy it and paste it in its own sheet, making sure that you **paste as value**.
+* You can then export this sheet as its own `.csv` file.
