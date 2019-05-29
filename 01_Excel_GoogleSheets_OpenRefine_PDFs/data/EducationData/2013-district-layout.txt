@@ -1,0 +1,50 @@
+README.TXT file for the 2013 SAIPE School District Estimates FTP Directory
+ 
+I.    File Organization:
+
+    The files in the data directory contain estimates of population and
+    poverty.  
+
+    The school districts for which we have estimates were 
+    identified in the 2013 school district mapping survey,
+    which asked about all school districts as of January 1, 2014 and 
+    used school district boundaries for the 2013-2014 school year.
+
+    The 2013 estimates are consistent with the population controls and 
+    income concepts used in the 2013 American Community Survey single-year 
+    estimates.    
+
+    There is one file for each of the states, the District of Columbia, and 
+    the entire United States.  Each file contains the FIPS state code, 
+    Department of Education Common Core of Data (CCD) ID numbers, District names, 
+    the total population, population of school-age children, and estimated 
+    number of school-age children in poverty related to the head of the household.
+    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+II.   File Names
+    
+     There are two kinds of files here:
+
+        1) USSD13.txt           (A large file containing the estimates for
+                                 every school district in the nation)
+
+        2) sd13_[STATE].txt     (Smaller files containing estimates for 
+                                 every school district in an individual State)
+
+           where [STATE] = standard two-letter postal abbreviations. 
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+III.  Record Layout for Files
+
+      Position   Variable
+
+          1- 2       FIPS State code (00 for US record)
+          4- 8       District ID
+         10-81       District Name
+         83-90       Total Population 
+         92-99       Population of Relevant Children 5 to 17 years of Age
+        101-108      Estimated Number of Relevant Children 5 to 17 years old
+                     in Poverty Related to the Householder 
+        110-130      A tag indicating the file name and date of creation

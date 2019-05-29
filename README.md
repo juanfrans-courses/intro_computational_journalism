@@ -21,7 +21,7 @@ The Columbia University Graduate School of Journalism is the premiere institutio
 Course time will be full-day, Monday through Friday. Instruction time will be divided between short lectures (90-120 minutes) and exercises done individually and in small teams.
 
 ### Monday, June 3
-*Basic data analysis (Excel / Google Sheets / Open Refine / PDFs)*
+[*Basic data analysis (Excel / Google Sheets / Open Refine / PDFs)*](01_Excel_GoogleSheets_OpenRefine_PDFs/01_Excel_GoogleSheets_OpenRefine_PDFs.md)
 * Introductions and overall plan for the week
 * Data processing & organization: workflow and principles
   * Raw data and data wrangling
@@ -41,5 +41,5 @@ Course time will be full-day, Monday through Friday. Instruction time will be di
   * Creating a frequency distribution table and histograms
   * Pivot tables
   * Exporting data (`.csv` & `.txt`)
-* Importing *PDF* tables into *Excel*
+* Extracting tables from *PDFs*
 * *Python* installation troubleshooting
