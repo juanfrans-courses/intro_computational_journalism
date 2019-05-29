@@ -63,4 +63,44 @@ Sometimes a file is neither comma nor tab, nor semicolon delimited. Sometimes th
 * `=right(string, position_from_right)`
 * `=mid(string, position, number_of_characters_to_extract)`
 
-#### Basic summary calculations
+### Exercise 2 - Basic summary calculations
+Some of the basic summary calculations you can perform in Excel or Google Sheets are:
+* Mean: `=average(range)`
+* Median: `=median(range)`
+* Standard deviation: `=stdev(range)`
+
+These three formulas automatically ignore text in the range.
+
+Think of what other operations you can perform and explore other formulas.
+
+### Exercise 3 - If statements
+* `if` statements perform simple logical tests and return a specific value for a `true` result and another for a `false` result.
+* The simplest syntax of this function is `=if(logical_test, [value_if_true], [value_if_false])`
+* You can also nest multiple `if` statements in one formula. This would take the following form: `=if(logical_test, if(logical_test, [value_if_true], [value_if_false]), [value_if_false])`
+* There are many more functions based on this simple logic, such as:
+  * `countif`, which counts the number of times a specific value occurs in a table. Its basic syntax is `=countif(range, value)`
+  * `sumif`, which sums values based on a specific logical test. Its basic syntax is `=sumif(range, criteria, [sum_range])`
+  * `sumifs`, which sums based on more than one logical test. Its basic syntax is `=sumifs(sum_range, range1, criteria1, [range2], [criteria2], ...)`
+* **Wildcards**: In these formulas (and in many other operations) you may use `*`, `?`, or `~` as wildcards:
+  * `*` stands for multiple characters (eg. `pq*`, `*pq`, `p*q`)
+  * `?` stands for only one character (eg. `c*ty` is different than `c?ty`)
+  * `~` is used when you actually have a `?` or a `*` that is not a wildcard (eg. `who~?*`)
+
+### Exercise 4 - Looking up values
+* `index` and `match` functions let you lookup the location of a value or the value itself based on certain criteria.
+* The `index` function returns the value based on a table, row number, and row column:
+  * It has the following syntax: `=index(array, row_num, [column_num])`
+  * It can also take a series of tables: `=index((table1, table2, table3), row_num, [column_num], [area_num])`
+  * And it can also return a whole row or column, just select the output cells and click `ctrl + shift + enter`
+* The `match` function returns the position of a value in a row, column or table:
+  * It takes the following syntax: `=match(lookup_value, lookup_array, match_type)`
+  * `match_type` is either 0 (false) or 1 (true). 0 is a exact match, 1 is an approximation (eg. 575 will match to 500, after sorting A to Z, the largest value that's less than the lookup value)
+  * If `match_type` is 0 and the `lookup_value` is text, the lookup value can also include *wildcards*.
+* Finally, you can use the `index` and `match` functions together to get a specific value based on a condition:
+  * Basic syntax: `{=index(array, match(lookup_value, lookup_column, FALSE), [column_num])`
+  * And you can also use multiple criteria like this: `=index(array, match(1, (A1 = range1 * B1 = range2 * C1 = range3), 0))}` (use ctrl + shift + enter)
+* *Note that in Excel, as well as in Google Sheets, the first column is identified as column number 1. This is not the case in programming (Python and others), where the first column is identified as column number 0.*
+
+#### Exercise 5 - Joining tables
+
+#### Exercise 6 - Pivot tables
