@@ -63,6 +63,13 @@ Sometimes a file is neither comma nor tab, nor semicolon delimited. Sometimes th
 * `=right(string, position_from_right)`
 * `=mid(string, position, number_of_characters_to_extract)`
 
+There are other ways of splitting or combining columns and text:
+* In Excel `Data/Text to Columns...` takes a block of text and splits it into two or more columns based on a given character or set of characters.
+* In Google Sheets you can right click on the column and choose `Split text to columns...`
+* To aggregate columns (or values) you can use the `concatenate` function. This function takes the following form: `=concatenate(text1, text2, text3...)`. The text here can be either hard-coded text or reference to a cell.
+
+Finally, to clean a table you can use the `Edit/Find/Replace...` function in Excel to replace all instances of a value (or lack of) with another value. This tool takes in wildcards (see below).
+
 ### Exercise 2 - Basic summary calculations
 Some of the basic summary calculations you can perform in Excel or Google Sheets are:
 * Mean: `=average(range)`
@@ -117,3 +124,31 @@ Pivot tables are one of the most useful tools in Excel or Google Sheets. They al
 * And the values themselves can be aggregated with different operations: sum, count, maximum, minimum, average, standard deviation, etc.
 * Finally, once you have the pivot table that reflects your analysis, you can copy it and paste it in its own sheet, making sure that you **paste as value**.
 * You can then export this sheet as its own `.csv` file.
+
+## OpenRefine
+[OpenRefine](http://openrefine.org/), formerly Google Refine, is a program to clean and transform messy data. It contains a powerful set of tools that allow you to group and visualize your data, understand where some of its errors might lie, and transform it.
+
+In addition, it has two more advantages:
+* It does not require that you upload your data to a cloud service. Yes, it works in the browser, but it does through a localhost, which means that the data you use always stays in your computer.
+* It maintains a log of the transformations you perform to your data, which means that you can go back to any point at any time, and you also have a record of what you did to your data to clean it and transform it.
+
+### Exercise 7 - Load data into OpenRefine & clean columns
+For these exercises we will be using a subset of [New York City's 311 Service Requests](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9) data. You can find a downloaded version of the data [here](data/311_RodentData_2019/311_RodentData_2019.csv)
+
+First import the data into OpenRefine. Select the file and make sure all the import options are correct:
+* Comma separated
+* First row contains headers
+* `""` are used to enclose cells that contain separators (in this case, commas)
+* If all is correct, create the project.
+
+Even though the 311 data is pretty clean, it still contains problems. For example, look at the column `City`. You will notice that a lot of the cells contain `NEW YORK`, but others contain boroughs `QUEENS` or `BROOKLYN`, others even contain the name of the neighborhood, and some of those names are in uppercase and others in lowercase.
+
+To correct some of this, click on the dropdown menu next to the column title and select `Facet/Text facet`. On the right hand panel you will see the list of all the values, sorted alphabetically. There are 88 different values.
+
+To make them all title case, click again on the dropdown menu next to the header and select `Edit cells/Common transforms/To titlecase`. You will notice that now there are only 48 different values.
+
+* Open other education file in openrefine (character spacing: 2,6,73,9,9,9,11,10)
+* Remove trailing spaces
+* Transform to numbers
+* Rename columns
+* Export
