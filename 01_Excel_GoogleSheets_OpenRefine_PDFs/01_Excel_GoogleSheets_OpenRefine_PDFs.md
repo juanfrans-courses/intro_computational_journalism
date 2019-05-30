@@ -152,3 +152,6 @@ To make them all title case, click again on the dropdown menu next to the header
 * Transform to numbers
 * Rename columns
 * Export
+* Talk about where data is stored and how to access older projects
+* [Amazon Textract](https://aws.amazon.com/textract/)
+* Tesseract (mention)
