@@ -52,6 +52,7 @@ Course time will be full-day, Monday through Friday. Instruction time will be di
 *Fundamentals of programming*
 * Overview of the "stack":
   * How does it all fit together: Python, R, SQL, Jupyter Notebook, Anaconda, Pandas, Command Line, Version Control
+* Introduction to the command line
 * What is *Python*, what is it used for, and how is it different from other languages (R, Java, JavaScript, C++, SQL, Markdown, HTML, CSS)
 * Introduction to programming:
   * Variables and data types

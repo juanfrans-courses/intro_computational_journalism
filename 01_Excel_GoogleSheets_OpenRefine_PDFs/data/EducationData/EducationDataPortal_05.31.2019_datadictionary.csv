@@ -1,0 +1,6 @@
+"variable","label","description"
+"leaid","Local education agency identification number (NCES)",""
+"lea_name","Local education agency name","Name of the local education agency (school district)"
+"city_location","City of location",""
+"agency_type","Agency type",""
+"enrollment","Student enrollment",""

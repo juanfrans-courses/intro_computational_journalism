@@ -1,5 +1,16 @@
 # Excel, Google Sheets, OpenRefine & PDFs
 
+## Introductions & overview
+* Introductions:
+  * Background & experience
+  * Expectations for the course
+  * Equipment
+  * Possible datasets to explore
+  * Common tasks and workflows
+  * Stories to reproduce
+  * Need for more web & visualization?
+* Overview of the course
+
 ## Principles of data processing
 The question is, how do we organize and write our analysis or code so that in the future, we and others, can understand, test, and reproduced what we have done.
 
@@ -147,11 +158,38 @@ To correct some of this, click on the dropdown menu next to the column title and
 
 To make them all title case, click again on the dropdown menu next to the header and select `Edit cells/Common transforms/To titlecase`. You will notice that now there are only 48 different values.
 
-* Open other education file in openrefine (character spacing: 2,6,73,9,9,9,11,10)
-* Remove trailing spaces
-* Transform to numbers
-* Rename columns
-* Export
-* Talk about where data is stored and how to access older projects
-* [Amazon Textract](https://aws.amazon.com/textract/)
-* Tesseract (mention)
+Take a look at the changes you've done and the history you've created for this file. This is one of the great features in *OpenRefine* that goes a long way towards *reproducibility*.
+
+### Exercise 8 - Loading another dataset into OpenRefine
+Now load the educational dataset to learn how to load character delimited files:
+* The character spacing for the 2016 file should be `2,6,73,9,9,9,11,10`. *OpenRefine* takes the number of spaces between characters, not from the start of the line.
+* Some other cleaning and transforming techniques are:
+  * Removing trailing spaces
+  * Transforming text to numbers
+  * Renaming columns
+* Finally, when the dataset is clean, export it as a tab delimited file. There is single right delimiter to choose. It all depends on the content of the dataset and whether or not that particular delimiter might be found within the dataset.
+
+Note: *OpenRefine's* projects might get too large and take up too much memory. It is always useful to take a look at what projects you've created and delete the ones that you no longer need. However, always make a point to document well what transformations your data went through.
+
+## Putting it all together
+### Exercise 9 - Exploring Federal Election Commission data
+Use what you have learned to clean, transform, explore, join and analyze the Federal Election Commission 2015 - 2016 [datasets](data/FederalElectionCommission). These datasets were downloaded from the [Federal Election Commission site](https://classic.fec.gov/finance/disclosure/ftpdet.shtml#a2015_2016) and on that site you can find their corresponding data dictionaries.
+
+## Tables from PDFs
+*Tabula* is a very useful tool that allows you to extract tables from `.pdf` files into `.csv` or *Excel* spreadsheets. Just as with *OpenRefine*, *Tabula* through your browser but does not upload your documents to the cloud.
+
+You can install *Tabula* by following the instructions [here](https://tabula.technology/).
+
+### Exercise 10 - Extract table data from NYPD report
+Use *Tabula* to extract the tables embedded in this [NYPD 2017 End-Of-Year Report](data/NYPD_EndOfYearReport) originally downloaded from [here](https://www1.nyc.gov/assets/nypd/downloads/pdf/analysis_and_planning/year-end-2017-enforcement-report.pdf).
+
+As with *OpenRefine*, you need to check where *Tabula* saves your documents and manage their storage.
+
+## Optical Character Recognition
+When `.pdf` files are not encoded as text but as images, *Optical Character Recognition* (*OCR*) tools or software might be necessary to extract information into formats that we can analyze.
+
+The easiest way of doing this might be through *Google Documents*. If you are comfortable with uploading your documents to a cloud service, you can upload your documents to your *Google Drive*, right click on them, and choose `Open with/Google Docs`. *Google* will then attempt to convert your image documents (`.pdf`, `.jpg`, `.png`, or others) to text.
+
+If you are not comfortable with uploading your documents to the cloud you might want to try [*Tesseract*](https://github.com/tesseract-ocr/tesseract/wiki) which will run locally on your machine.
+
+Finally, *Amazon* just announced a service called [*Textract*](https://aws.amazon.com/textract/) which promises to scan large amounts of documents in very little time and extract text from them.
