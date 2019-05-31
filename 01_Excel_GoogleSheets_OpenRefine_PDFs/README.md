@@ -173,7 +173,7 @@ Note: *OpenRefine's* projects might get too large and take up too much memory. I
 
 ## Putting it all together
 ### Exercise 9 - Exploring Federal Election Commission data
-Use what you have learned to clean, transform, explore, join and analyze the Federal Election Commission 2015 - 2016 [datasets](data/FederalElectionCommission). These datasets were downloaded from the [Federal Election Commission site](https://classic.fec.gov/finance/disclosure/ftpdet.shtml#a2015_2016) and on that site you can find their corresponding data dictionaries.
+Use what you have learned to clean, transform, explore, join and analyze the Federal Election Commission 2015 - 2016 [datasets](data/FederalElectionCommissionData). These datasets were downloaded from the [Federal Election Commission site](https://classic.fec.gov/finance/disclosure/ftpdet.shtml#a2015_2016) and on that site you can find their corresponding data dictionaries.
 
 ## Tables from PDFs
 *Tabula* is a very useful tool that allows you to extract tables from `.pdf` files into `.csv` or *Excel* spreadsheets. Just as with *OpenRefine*, *Tabula* through your browser but does not upload your documents to the cloud.
