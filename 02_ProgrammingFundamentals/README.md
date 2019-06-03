@@ -25,11 +25,13 @@ Those problems include string manipulation -- looking at the words or sentences 
 
 In the late 1990s van Rossum wrote a proposal entitled "Computer Programming for Everybody". To give you a sense of van Rossum as a designer of technology, consider this passage.
 
-    In the dark ages, only those with power or great wealth (and selected experts) possessed reading and writing skills or the ability to acquire them. It can be argued that literacy of the general population (while still not 100%), together with the invention of printing technology, has been one of the most emancipatory forces of modern history.
+```
+In the dark ages, only those with power or great wealth (and selected experts) possessed reading and writing skills or the ability to acquire them. It can be argued that literacy of the general population (while still not 100%), together with the invention of printing technology, has been one of the most emancipatory forces of modern history.
 
-    We have only recently entered the information age, and it is expected that computer and communication technology will soon replace printing as the dominant form of information distribution technology. About half of all US households already own at least one personal computer, and this number is still growing.
+We have only recently entered the information age, and it is expected that computer and communication technology will soon replace printing as the dominant form of information distribution technology. About half of all US households already own at least one personal computer, and this number is still growing.
 
-    However, while many people nowadays use a computer, few of them are computer programmers. Non-programmers aren't really "empowered" in how they can use their computer: they are confined to using applications in ways that "programmers" have determined for them. One doesn't need to be a visionary to see the limitations here.
+However, while many people nowadays use a computer, few of them are computer programmers. Non-programmers aren't really "empowered" in how they can use their computer: they are confined to using applications in ways that "programmers" have determined for them. One doesn't need to be a visionary to see the limitations here.
+```
 
 Later he envisions a world with millions or even billions of computer programmers at various levels of proficiency. His is a world where people are not trained by expert-created platforms, but instead have sufficient facility with computation to help shape the software systems around them.
 ## Introduction to Jupyter Notebooks
