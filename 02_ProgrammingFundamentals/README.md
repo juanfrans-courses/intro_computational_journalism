@@ -1,4 +1,10 @@
 # Fundamentals of Programming
+
+## Recap
+* How did the exercises go? Any findings, trouble, workflow?
+* OpenRefine
+* Tabula
+
 ## Why Programming
 * Computers have become part of our everyday life
 * They regulate and shape our interactions with the physical and virtual worlds.
@@ -12,6 +18,7 @@
   * [Brian Keegan - The need for openness in journalism](https://nbviewer.jupyter.org/github/brianckeegan/Bechdel/blob/master/Bechdel_test.ipynb)
   * [Nature - Why Jupyter is data scientists' computational notebook of choice](https://www.nature.com/articles/d41586-018-07196-1)
   * [The Economist - Peeling back the curtain](https://medium.economist.com/peeling-back-the-curtain-487bd3be0c47)
+
 ## Why Python
 * Readability and code sharing (advantages)
 * Python in its "Notebook" *framework* (there are many ways of using Python)
@@ -32,12 +39,14 @@ In the late 1990s van Rossum wrote a proposal entitled "Computer Programming for
 "However, while many people nowadays use a computer, few of them are computer programmers. Non-programmers aren't really "empowered" in how they can use their computer: they are confined to using applications in ways that "programmers" have determined for them. One doesn't need to be a visionary to see the limitations here."
 
 Later he envisions a world with millions or even billions of computer programmers at various levels of proficiency. His is a world where people are not trained by expert-created platforms, but instead have sufficient facility with computation to help shape the software systems around them.
+
 ## Introduction to Jupyter Notebooks
 * Code a bit, have a look, code more, come up with ideas, share.
 * Jupyter comes from the original core languages that the notebook supported -- Julia, Python and R. New langauges are being created all the time, often tailored to particular kinds of problems. Python is a bit of a generalist, while R is great for statistical computations.
 * Open jupyter notebook and explain how it works (double click on a cell and shift-enter to make it run)
 * Markdown (pre-language for creating HTML) ==> explain syntax
 * Code
+
 ## Simple variables and functions
 * Math operation `5+3`
 * Variables: `p = 5`, `3+p`
@@ -69,6 +78,7 @@ Later he envisions a world with millions or even billions of computer programmer
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Greatest Witch Hunt in the History of our Country! NO COLLUSION! Border Coyotes, Drug Dealers and Human Traffickers are treated better. Who alerted CNN to be there?</p>&mdash; Donald J. Trump (@realDonaldTrump) <a href="https://twitter.com/realDonaldTrump/status/1088832908494888961?ref_src=twsrc%5Etfw">January 25, 2019</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ```
+
 ### Exercise 1 - Trump's Tweets
 * Load 2019
 ```
@@ -81,9 +91,11 @@ tweets
 * Tell us something about Trump's 2019 tweets
 * Load 2018 and compare the two through code
 * Do something new by checking the Python 3 online documentation
+
 ## Simple variables and functions continued
 * Floating point errors
 * `0.2 + 0.1`
+
 ### Booleans:
   * `3>5`
   * `10.0 < 100.0`
@@ -96,8 +108,10 @@ tweets
   * `print("z" in "Jon Levine" and 3 < 5)`
   * `print(not "u" in "Donald Trump")`
   * `print(6 > 5 or (2 > 5 and "u" in "Trump"))`
+
 ### Exercise 2 - Booleans
 * Play around and make sure you understand
+
 ### Operators
 Technically, all of these symbols (">", "<", "in", "and", "or" and "not") are examples of operators in Python. The simplest kind of operators are arithmetic.
 ```
@@ -145,6 +159,7 @@ print("Here x and y are both pointing to the value 3:", x, y)
 y = 5
 print("But now y points to the value 5, and x is unchanged:", x, y)
 ```
+
 ### Lists
 * *Ordered* collection of objects
 ```
@@ -214,7 +229,8 @@ print(rough_words,"\n")
 print("There are roughly", len(rough_words), "words in this tweet.")
 ```
 * `print(line.split("e"))`
-### Exercise
+* 
+### Exercise 3 - Lists
 Create a list and play with it, remove, add, split, make sure you understand
 
 ### List of lists
@@ -238,6 +254,7 @@ print(len(times))
 ```
 * Remember this for Pandas dataframe
 * How do you interact with this one?
+
 ### Dictionaries
 ```
 djt = [
@@ -285,9 +302,11 @@ print(type(tweet))
 * `tweet["full_text"]`
 * `tweet["created_at"]` in UTC
 * `tweet["truncated"]`
-### Exercise
+
+### Exercise 4 - Exploring dictionaries
 * Find something in his tweets
 * Find some information about DTJ in his user information from the tweets
+
 ## Loops and conditionals
 ### Conditionals
 ```
@@ -333,6 +352,7 @@ elif x > 25:
 else:
     print("small")
 ```
+
 ### Loops
 * `type(range(10))`
 ```
@@ -415,6 +435,7 @@ while flip == "T":
     
 print("--->", count, "flip(s)")
 ```
+
 ## Functions
 * Basically a block of code that we want to use repeatedly
 * *Indentation*
@@ -478,8 +499,10 @@ def stately():
     
     print("Goodbye "+name+".")
 ```
+
 ### Handling errors
 * `try` `catch` statements
+
 ## Objects
 * Objects have properties and methods (functions)
 * They belong to a class, this is how you define them, by creating the class and describing the class' methods and properties
@@ -507,7 +530,8 @@ class Car:
 car1 = Car("Mazda", "black", 2008, 1000)
 car1.updateMilage(2000)
 ```
-## Final exercise
+
+## Exercise 5 - Tip calculator
 Create a tip calculator
 
 ## Notes to self
