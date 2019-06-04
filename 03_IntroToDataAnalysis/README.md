@@ -1,5 +1,15 @@
 # Introduction to Data Analysis
 
+## Continuation from last class
+* Loops + `while`
+  * Coin flip example
+  * Sample
+* Conditionals
+* Functions
+* Handling errors
+* Objects
+* Look back to one of Buzzfeed's Jupyter Notebooks?
+
 ## Pandas & dataframes (+Numpy)
 * What are they?
 * Why are they better?
