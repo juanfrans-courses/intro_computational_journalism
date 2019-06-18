@@ -1,0 +1,20 @@
+body {
+    background-color: blue;
+}
+
+h1 {
+    color: white;
+    font-size: 64px;
+}
+
+.italicText {
+    font-style: italic;
+}
+
+#myId {
+    color: yellowgreen;
+}
+
+.red {
+    background-color: red;
+}
